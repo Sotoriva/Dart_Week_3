@@ -1,3 +1,9 @@
+executa a docker em segundo plano
+`docker-compose up -d`
+
+executa o build_runner para executar a cada alteração
+`dart pub run build_runner watch`# DartWeek3_Backend
+
 ## DW #3 - Desafio 1
 Na aula de hoje você aprendeu iniciar um projeto com Shelf, configurar os meddlewares e a iniciar uma nova rota.
 
