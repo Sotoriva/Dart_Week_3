@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:dartweek3_frontend/app/models/menu_item_model.dart';
+import 'package:pizza_delivery/app/models/menu_item_model.dart';
 
 class MenuModel {
   final int id;
@@ -23,14 +23,11 @@ class MenuModel {
     return MenuModel(
       id: map['id'] ?? 0,
       name: map['name'] ?? '',
-      items: List<MenuItemModel>.from(map['items']
-              ?.map((x) => MenuItemModel.fromMap(x) ?? MenuItemModel())) ??
-          const [], //TODO: fazer percorrer a lista
+      items: List<MenuItemModel>.from(map['items']?.map((x) => MenuItemModel.fromMap(x) ?? MenuItemModel())) ?? const [], //TODO: fazer percorrer a lista
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory MenuModel.fromJson(String source) =>
-      MenuModel.fromMap(json.decode(source));
+  factory MenuModel.fromJson(String source) => MenuModel.fromMap(json.decode(source));
 }

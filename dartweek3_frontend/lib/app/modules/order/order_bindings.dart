@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/modules/order/order_controller.dart';
-import 'package:dartweek3_frontend/app/repositories/order_repository.dart';
+import 'package:pizza_delivery/app/modules/order/order_controller.dart';
+import 'package:pizza_delivery/app/repositories/order_repository.dart';
 import 'package:get/get.dart';
 
 class OrderBindings implements Bindings {

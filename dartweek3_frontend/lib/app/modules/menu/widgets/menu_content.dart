@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/modules/menu/menu_controller.dart';
-import 'package:dartweek3_frontend/app/modules/menu/widgets/menu_group.dart';
+import 'package:pizza_delivery/app/modules/menu/menu_controller.dart';
+import 'package:pizza_delivery/app/modules/menu/widgets/menu_group.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

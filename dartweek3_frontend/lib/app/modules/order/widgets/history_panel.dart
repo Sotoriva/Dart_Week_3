@@ -1,4 +1,4 @@
-import 'package:dartweek3_frontend/app/models/order_model.dart';
+import 'package:pizza_delivery/app/models/order_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -7,8 +7,7 @@ class HistoryPanel extends StatelessWidget {
 
   HistoryPanel(this.order, {Key key}) : super(key: key);
 
-  final formatter =
-      NumberFormat.currency(name: 'R\$', locale: 'pt_br', decimalDigits: 2);
+  final formatter = NumberFormat.currency(name: 'R\$', locale: 'pt_br', decimalDigits: 2);
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +42,5 @@ class HistoryPanel extends StatelessWidget {
     );
   }
 
-  double _calculateTotalOrder() =>
-      order.items.fold(0, (total, o) => total += o.item.price);
+  double _calculateTotalOrder() => order.items.fold(0, (total, o) => total += o.item.price);
 }

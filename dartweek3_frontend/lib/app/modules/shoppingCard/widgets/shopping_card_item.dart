@@ -1,4 +1,4 @@
-import 'package:dartweek3_frontend/app/models/menu_item_model.dart';
+import 'package:pizza_delivery/app/models/menu_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

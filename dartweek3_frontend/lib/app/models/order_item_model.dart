@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:dartweek3_frontend/app/models/menu_item_model.dart';
+import 'package:pizza_delivery/app/models/menu_item_model.dart';
 
 class OrderItemModel {
   OrderItemModel({
@@ -28,6 +28,5 @@ class OrderItemModel {
 
   String toJson() => json.encode(toMap());
 
-  factory OrderItemModel.fromJson(String source) =>
-      OrderItemModel.fromMap(json.decode(source));
+  factory OrderItemModel.fromJson(String source) => OrderItemModel.fromMap(json.decode(source));
 }

@@ -1,4 +1,4 @@
-import 'package:dartweek3_frontend/app/helpers/rest_client.dart';
+import 'package:pizza_delivery/app/helpers/rest_client.dart';
 import 'package:get/get.dart';
 
 class ApplicationBindings implements Bindings {

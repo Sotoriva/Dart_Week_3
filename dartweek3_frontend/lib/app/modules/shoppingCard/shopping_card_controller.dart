@@ -1,16 +1,15 @@
-import 'package:dartweek3_frontend/app/helpers/loader_mixin.dart';
-import 'package:dartweek3_frontend/app/helpers/messages_mixin.dart';
-import 'package:dartweek3_frontend/app/models/menu_item_model.dart';
-import 'package:dartweek3_frontend/app/models/user_model.dart';
-import 'package:dartweek3_frontend/app/repositories/order_repository.dart';
-import 'package:dartweek3_frontend/app/view_models/checkout_input_model.dart';
+import 'package:pizza_delivery/app/helpers/loader_mixin.dart';
+import 'package:pizza_delivery/app/helpers/messages_mixin.dart';
+import 'package:pizza_delivery/app/models/menu_item_model.dart';
+import 'package:pizza_delivery/app/models/user_model.dart';
+import 'package:pizza_delivery/app/repositories/order_repository.dart';
+import 'package:pizza_delivery/app/view_models/checkout_input_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:grouped_buttons/grouped_buttons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class ShoppingCardController extends GetxController
-    with MessagesMixin, LoaderMixin {
+class ShoppingCardController extends GetxController with MessagesMixin, LoaderMixin {
   final OrderRepository _repository;
   final RxList<MenuItemModel> flavoursSelected;
 
@@ -25,8 +24,7 @@ class ShoppingCardController extends GetxController
   final _loading = false.obs;
 
   String get userName => _user.value?.name ?? '';
-  double get totalPrice =>
-      flavoursSelected.fold(0, (total, item) => total += item.price);
+  double get totalPrice => flavoursSelected.fold(0, (total, item) => total += item.price);
   String get address => _address.value;
   String get paymentType => _paymentType.value;
 
@@ -93,13 +91,11 @@ class ShoppingCardController extends GetxController
   Future<void> checkout() async {
     if (address.isBlank) {
       _message(
-        MessageModel(
-            'Erro', 'Endereço de entrega obrigatório!', MessageType.error),
+        MessageModel('Erro', 'Endereço de entrega obrigatório!', MessageType.error),
       );
     } else if (paymentType.isBlank) {
       _message(
-        MessageModel(
-            'Erro', 'Forma de pagamento obrigatória!', MessageType.error),
+        MessageModel('Erro', 'Forma de pagamento obrigatória!', MessageType.error),
       );
     } else {
       try {
@@ -112,16 +108,14 @@ class ShoppingCardController extends GetxController
         ));
         _loading(false);
         _message(
-          MessageModel(
-              'Sucesso', 'Pedido gerado com sucesso!', MessageType.info),
+          MessageModel('Sucesso', 'Pedido gerado com sucesso!', MessageType.info),
         );
         await 1.seconds.delay();
         Get.close(3);
       } catch (e) {
         print(e);
         _loading(false);
-        _message(
-            MessageModel('Erro', 'Erro ao gerar pedido!', MessageType.error));
+        _message(MessageModel('Erro', 'Erro ao gerar pedido!', MessageType.error));
       }
     }
   }

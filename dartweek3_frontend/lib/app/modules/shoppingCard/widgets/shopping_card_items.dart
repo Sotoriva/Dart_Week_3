@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/modules/shoppingCard/shopping_card_controller.dart';
-import 'package:dartweek3_frontend/app/modules/shoppingCard/widgets/shopping_card_item.dart';
+import 'package:pizza_delivery/app/modules/shoppingCard/shopping_card_controller.dart';
+import 'package:pizza_delivery/app/modules/shoppingCard/widgets/shopping_card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -24,9 +24,7 @@ class ShoppingCardItems extends GetView<ShoppingCardController> {
           ),
         ),
         SizedBox(height: 10),
-        ...controller.flavoursSelected
-            .map((item) => ShoppingCardItem(item))
-            .toList(),
+        ...controller.flavoursSelected.map((item) => ShoppingCardItem(item)).toList(),
         Divider(),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),

@@ -1,12 +1,11 @@
-import 'package:dartweek3_frontend/app/helpers/loader_mixin.dart';
-import 'package:dartweek3_frontend/app/helpers/messages_mixin.dart';
-import 'package:dartweek3_frontend/app/helpers/rest_client.dart';
-import 'package:dartweek3_frontend/app/repositories/user_repository.dart';
-import 'package:dartweek3_frontend/app/view_models/register_user_input_model.dart';
+import 'package:pizza_delivery/app/helpers/loader_mixin.dart';
+import 'package:pizza_delivery/app/helpers/messages_mixin.dart';
+import 'package:pizza_delivery/app/helpers/rest_client.dart';
+import 'package:pizza_delivery/app/repositories/user_repository.dart';
+import 'package:pizza_delivery/app/view_models/register_user_input_model.dart';
 import 'package:get/get.dart';
 
-class RegisterController extends GetxController
-    with LoaderMixin, MessagesMixin {
+class RegisterController extends GetxController with LoaderMixin, MessagesMixin {
   final UserRepository _repository;
 
   final _obscureTextPassword = true.obs;
@@ -42,8 +41,7 @@ class RegisterController extends GetxController
 
       await _repository.saveUser(inputModel);
       _loading(false);
-      _message(MessageModel(
-          'Sucesso', 'Usuário cadastrado com sucesso', MessageType.info));
+      _message(MessageModel('Sucesso', 'Usuário cadastrado com sucesso', MessageType.info));
       await 1.seconds.delay();
       Get.close(2);
     } on RestClientException catch (e) {
@@ -53,8 +51,7 @@ class RegisterController extends GetxController
     } catch (e) {
       print(e);
       _loading(false);
-      _message(MessageModel(
-          'Erro', 'Erro ao registrar usuário!', MessageType.error));
+      _message(MessageModel('Erro', 'Erro ao registrar usuário!', MessageType.error));
     }
   }
 }

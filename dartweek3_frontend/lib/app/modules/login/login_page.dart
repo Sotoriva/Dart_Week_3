@@ -1,7 +1,7 @@
-import 'package:dartweek3_frontend/app/components/botao.dart';
-import 'package:dartweek3_frontend/app/components/input.dart';
-import 'package:dartweek3_frontend/app/modules/login/login_controller.dart';
-import 'package:dartweek3_frontend/app/modules/register/register_page.dart';
+import 'package:pizza_delivery/app/components/botao.dart';
+import 'package:pizza_delivery/app/components/input.dart';
+import 'package:pizza_delivery/app/modules/login/login_controller.dart';
+import 'package:pizza_delivery/app/modules/register/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
@@ -32,9 +32,7 @@ class LoginPage extends GetView<LoginController> {
                         controller: emailEditingController,
                         label: "Email",
                         validator: (String value) {
-                          if (value == null ||
-                              value.isBlank ||
-                              !value.isEmail) {
+                          if (value == null || value.isBlank || !value.isEmail) {
                             return 'Email inválido!';
                           }
                           return null;

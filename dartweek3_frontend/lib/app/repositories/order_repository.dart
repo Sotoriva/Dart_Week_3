@@ -1,6 +1,6 @@
-import 'package:dartweek3_frontend/app/helpers/rest_client.dart';
-import 'package:dartweek3_frontend/app/models/order_model.dart';
-import 'package:dartweek3_frontend/app/view_models/checkout_input_model.dart';
+import 'package:pizza_delivery/app/helpers/rest_client.dart';
+import 'package:pizza_delivery/app/models/order_model.dart';
+import 'package:pizza_delivery/app/view_models/checkout_input_model.dart';
 
 class OrderRepository {
   final RestClient _restClient;
@@ -8,8 +8,7 @@ class OrderRepository {
   OrderRepository(this._restClient);
 
   Future<List<OrderModel>> findMyOrders(int userId) async {
-    final response =
-        await _restClient.get('/order/user/$userId', decoder: (resp) {
+    final response = await _restClient.get('/order/user/$userId', decoder: (resp) {
       if (resp is List) {
         return resp.map<OrderModel>((o) => OrderModel.fromMap(o)).toList();
       }

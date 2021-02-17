@@ -1,10 +1,10 @@
-import 'package:dartweek3_frontend/app/helpers/messages_mixin.dart';
-import 'package:dartweek3_frontend/app/models/menu_item_model.dart';
-import 'package:dartweek3_frontend/app/models/menu_model.dart';
-import 'package:dartweek3_frontend/app/modules/shoppingCard/shopping_card_controller.dart';
-import 'package:dartweek3_frontend/app/modules/shoppingCard/shopping_card_page.dart';
-import 'package:dartweek3_frontend/app/repositories/menu_repository.dart';
-import 'package:dartweek3_frontend/app/repositories/order_repository.dart';
+import 'package:pizza_delivery/app/helpers/messages_mixin.dart';
+import 'package:pizza_delivery/app/models/menu_item_model.dart';
+import 'package:pizza_delivery/app/models/menu_model.dart';
+import 'package:pizza_delivery/app/modules/shoppingCard/shopping_card_controller.dart';
+import 'package:pizza_delivery/app/modules/shoppingCard/shopping_card_page.dart';
+import 'package:pizza_delivery/app/repositories/menu_repository.dart';
+import 'package:pizza_delivery/app/repositories/order_repository.dart';
 import 'package:get/get.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
@@ -16,8 +16,7 @@ class MenuController extends GetxController with MessagesMixin {
 
   List<MenuModel> get menu => _menu;
   List<MenuItemModel> get flavoursSelected => _flavorsSelected;
-  double get totalValue =>
-      _flavorsSelected.fold(0, (value, item) => value += item.price);
+  double get totalValue => _flavorsSelected.fold(0, (value, item) => value += item.price);
 
   MenuController(this._repository);
 
@@ -33,14 +32,12 @@ class MenuController extends GetxController with MessagesMixin {
     if (_flavorsSelected.contains(item)) {
       _flavorsSelected.remove(item);
       _message(
-        MessageModel('Item removido!',
-            '${item.name} R\$${item.price}', MessageType.info), //TODO: add format money
+        MessageModel('Item removido!', '${item.name} R\$${item.price}', MessageType.info), //TODO: add format money
       );
     } else {
       _flavorsSelected.add(item);
       _message(
-        MessageModel('Item adicionado!',
-            '${item.name} R\$${item.price}', MessageType.info),
+        MessageModel('Item adicionado!', '${item.name} R\$${item.price}', MessageType.info),
       );
     }
   }

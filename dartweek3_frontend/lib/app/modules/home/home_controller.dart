@@ -1,6 +1,6 @@
-import 'package:dartweek3_frontend/app/modules/menu/menu_controller.dart';
-import 'package:dartweek3_frontend/app/modules/menu/menu_page.dart';
-import 'package:dartweek3_frontend/app/repositories/menu_repository.dart';
+import 'package:pizza_delivery/app/modules/menu/menu_controller.dart';
+import 'package:pizza_delivery/app/modules/menu/menu_page.dart';
+import 'package:pizza_delivery/app/repositories/menu_repository.dart';
 import 'package:get/get.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 

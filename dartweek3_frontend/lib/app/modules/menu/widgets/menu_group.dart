@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/models/menu_model.dart';
-import 'package:dartweek3_frontend/app/modules/menu/menu_controller.dart';
+import 'package:pizza_delivery/app/models/menu_model.dart';
+import 'package:pizza_delivery/app/modules/menu/menu_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
@@ -46,14 +46,11 @@ class MenuGroup extends GetView<MenuController> {
               ),
               trailing: Obx(
                 () {
-                  final itemSelected =
-                      controller.flavoursSelected.contains(item);
+                  final itemSelected = controller.flavoursSelected.contains(item);
                   return IconButton(
                     onPressed: () => controller.addItem(item),
                     icon: Icon(
-                      itemSelected
-                          ? FontAwesome.minus_square
-                          : FontAwesome.plus_square,
+                      itemSelected ? FontAwesome.minus_square : FontAwesome.plus_square,
                       color: Get.theme.primaryColor,
                       size: 20,
                     ),

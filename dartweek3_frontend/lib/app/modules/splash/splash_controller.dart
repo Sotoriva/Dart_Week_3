@@ -1,6 +1,6 @@
-import 'package:dartweek3_frontend/app/modules/home/home_page.dart';
-import 'package:dartweek3_frontend/app/modules/login/login_page.dart';
-import 'package:dartweek3_frontend/models/user_logged.dart';
+import 'package:pizza_delivery/app/modules/home/home_page.dart';
+import 'package:pizza_delivery/app/modules/login/login_page.dart';
+import 'package:pizza_delivery/models/user_logged.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

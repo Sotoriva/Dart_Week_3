@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/models/user_model.dart';
-import 'package:dartweek3_frontend/app/repositories/order_repository.dart';
+import 'package:pizza_delivery/app/models/user_model.dart';
+import 'package:pizza_delivery/app/repositories/order_repository.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

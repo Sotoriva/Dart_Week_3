@@ -1,4 +1,4 @@
-import 'package:dartweek3_frontend/app/modules/menu/menu_controller.dart';
+import 'package:pizza_delivery/app/modules/menu/menu_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -18,9 +18,7 @@ class MenuBuyButton extends GetView<MenuController> {
                 'Total R\$ ${formatter.format(controller.totalValue)}',
                 style: TextStyle(
                   fontSize: 18,
-                  color: controller.flavoursSelected.isEmpty
-                      ? Colors.grey
-                      : Colors.black,
+                  color: controller.flavoursSelected.isEmpty ? Colors.grey : Colors.black,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -32,9 +30,7 @@ class MenuBuyButton extends GetView<MenuController> {
                 onPressed: () => controller.goToShoppingCard(),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    controller.flavoursSelected.isEmpty
-                        ? Colors.grey[200]
-                        : Colors.red,
+                    controller.flavoursSelected.isEmpty ? Colors.grey[200] : Colors.red,
                   ),
                 ),
                 child: Padding(
@@ -43,9 +39,7 @@ class MenuBuyButton extends GetView<MenuController> {
                     'Fechar Pedido',
                     style: TextStyle(
                       fontSize: 18,
-                      color: controller.flavoursSelected.isEmpty
-                          ? Colors.grey
-                          : Colors.white,
+                      color: controller.flavoursSelected.isEmpty ? Colors.grey : Colors.white,
                     ),
                   ),
                 ),

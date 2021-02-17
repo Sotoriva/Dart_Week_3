@@ -1,6 +1,6 @@
-import 'package:dartweek3_frontend/app/helpers/rest_client.dart';
-import 'package:dartweek3_frontend/app/models/user_model.dart';
-import 'package:dartweek3_frontend/app/view_models/register_user_input_model.dart';
+import 'package:pizza_delivery/app/helpers/rest_client.dart';
+import 'package:pizza_delivery/app/models/user_model.dart';
+import 'package:pizza_delivery/app/view_models/register_user_input_model.dart';
 // import 'package:get/get.dart';
 // = Get.find()
 

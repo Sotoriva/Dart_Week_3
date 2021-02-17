@@ -1,6 +1,6 @@
-import 'package:dartweek3_frontend/app/components/bottom_navigation.dart';
-import 'package:dartweek3_frontend/app/modules/home/home_controller.dart';
-import 'package:dartweek3_frontend/app/modules/home/widgets/home_header.dart';
+import 'package:pizza_delivery/app/components/bottom_navigation.dart';
+import 'package:pizza_delivery/app/modules/home/home_controller.dart';
+import 'package:pizza_delivery/app/modules/home/widgets/home_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

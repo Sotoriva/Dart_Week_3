@@ -1,8 +1,8 @@
-import 'package:dartweek3_frontend/app/helpers/loader_mixin.dart';
-import 'package:dartweek3_frontend/app/helpers/messages_mixin.dart';
-import 'package:dartweek3_frontend/app/helpers/rest_client.dart';
-import 'package:dartweek3_frontend/app/modules/splash/splash_page.dart';
-import 'package:dartweek3_frontend/app/repositories/user_repository.dart';
+import 'package:pizza_delivery/app/helpers/loader_mixin.dart';
+import 'package:pizza_delivery/app/helpers/messages_mixin.dart';
+import 'package:pizza_delivery/app/helpers/rest_client.dart';
+import 'package:pizza_delivery/app/modules/splash/splash_page.dart';
+import 'package:pizza_delivery/app/repositories/user_repository.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,5 +1,5 @@
-import 'package:dartweek3_frontend/app/config/application_bindings.dart';
-import 'package:dartweek3_frontend/app/config/ui_config.dart';
+import 'package:pizza_delivery/app/config/application_bindings.dart';
+import 'package:pizza_delivery/app/config/ui_config.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

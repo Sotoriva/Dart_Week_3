@@ -1,7 +1,7 @@
-import 'package:dartweek3_frontend/app/components/bottom_navigation.dart';
-import 'package:dartweek3_frontend/app/models/order_model.dart';
-import 'package:dartweek3_frontend/app/modules/order/order_controller.dart';
-import 'package:dartweek3_frontend/app/modules/order/widgets/history_panel.dart';
+import 'package:pizza_delivery/app/components/bottom_navigation.dart';
+import 'package:pizza_delivery/app/models/order_model.dart';
+import 'package:pizza_delivery/app/modules/order/order_controller.dart';
+import 'package:pizza_delivery/app/modules/order/widgets/history_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
